@@ -20,7 +20,7 @@ header{
 header img{
   width: 50px;
   float: left;
-  margin: 20px;
+  margin: 40px;
 }
 header input{
   background-color: black;
@@ -34,7 +34,7 @@ header input{
   align-items: center;
   color: white;
   border: 1px solid white;
-  margin: 20px;
+  margin: 40px;
 }
 .nav_bar_right button{
   width: 30px;
@@ -57,11 +57,13 @@ header input{
   align-items: center;
 }
 .film{
-  width: 300px;
-  height: 500px;
+  width: 304px;
+  height: 454px;
   background-color: white;
+
 
 }
 .film img{
   max-width: 300px;
+  margin: 2px;
 }
