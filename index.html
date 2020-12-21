@@ -17,7 +17,7 @@
     <div id="root">
       <!-- HEADER -->
       <header>
-        <img src="img/BOOLFLIX copia.png" alt="">
+        <img src="img/BOOLFLIX copia.png"  title="img/BOOLFLIX copia.png" alt="">
 
         <div class="logo">
           <img src="img/BOOLFLIX.png" alt="">
@@ -40,14 +40,14 @@
               <span>{{film.title}}</span>
             </div>
             <div>
+              <h4>Original Title: </h4>
+              <span>{{film.original_title}}</span>
+            </div>
+            <div>
               <h4>Language: </h4>
               <span>{{film.original_language}}</span>
             </div>
 
-            <div class="description">
-              <h4>Description: </h4>
-              <p>Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-            </div>
             <h4>Vote: <span>
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -55,7 +55,7 @@
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
             </span></h4>
-            <div>
+            <div class="overview">
               <h4>Overview: </h4>
               <p>{{film.overview}}</p>
             </div>
