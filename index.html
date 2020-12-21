@@ -33,7 +33,7 @@
       <div class="home_films">
 
         <div v-for='film in films' class="film">
-          <img src="img/blind.jpg" alt="">
+          <img src="img/blind.jpg"  alt="">
           <div class="info">
             <div>
               <h4>Title: </h4>
@@ -45,15 +45,13 @@
             </div>
             <div>
               <h4>Language: </h4>
-              <span>{{film.original_language}}</span>
+              <i :class="'flag flag-' + movie.original_language "></i>
+              <!-- <span>{{film.original_language}}</span> -->
             </div>
 
             <h4>Vote: <span>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
+              <i  class="fas fa-star"></i>
+              <i  class="far fa-star"></i>
             </span></h4>
             <div class="overview">
               <h4>Overview: </h4>
@@ -61,52 +59,6 @@
             </div>
           </div>
         </div>
-
-        <!-- <div class="film">
-          <img src="img/bb.jpg" alt="">
-          <div class="info">
-            <h3>titolo</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <h3>Voto: <span>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </span></h3>
-          </div>
-        </div>
-
-        <div class="film">
-          <img src="img/Jaws.jpg" alt="">
-          <div class="info">
-            <h3>titolo</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <h3>Voto: <span>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </span></h3>
-          </div>
-        </div>
-
-        <div class="film">
-          <img src="img/Titanic.jpg" alt="">
-          <div class="info">
-            <h3>titolo</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <h3>Voto: <span>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </span></h3>
-
-          </div>
-        </div> -->
 
       </div>
 

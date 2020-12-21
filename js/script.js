@@ -28,48 +28,18 @@ var root = new Vue(
             language: 'it-IT',
           }
         })
+
         .then(function (result) {
           console.log(result.data.results);
           self.search = '';
           self.films = result.data.results;
-        }
-      );
+        },
+
+        self.films.forEach((element) => {
+          let vote = (element.vote_average / 2);
+          element.star = Math.ceil(vote);
+        }),
+      )
     },
-  },
-
-});
-
- // ____________ESEMPIO____________________
-// var app = new Vue({
-//   el:'#root',
-//   data: {
-//     discs: [],
-//     genres: [],
-//       valueGenre: '',
-//   },
-//   methods:{
-//
-//   },
-//   mounted: function(){
-//     var self = this;
-//
-//     axios
-//     .get('https://flynn.boolean.careers/exercises/api/array/music')
-//     .then(function(result){
-//       self.discs = result.data.response;
-//       console.log(self.discs);
-//
-//       selff.discs.sort( function (disc1, disc2){
-//         return parseInt(disc1.year) - parseInt(disc2.year);
-//       });
-//
-//      });
-//
-//     self.discs.forEach(
-//     (element) => {
-//       if (!self.genres.includes(element.genre))
-//       self.genres.push(element.genre);
-//       }
-//     );
-//   }
-// });
+  }
+);
