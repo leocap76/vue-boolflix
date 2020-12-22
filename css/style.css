@@ -56,14 +56,17 @@ header input{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   padding-right: 40px;
   padding-left: 40px;
   padding-top: 150px;
+  /* overflow-x: hidden; */
 }
 .film{
   position: relative;
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   width: 224px;
   height: 334px;
   background-color: white;
@@ -77,11 +80,20 @@ header input{
   max-width: 220px;
   margin: 2px;
 }
-.film:hover img{
+.film:hover img.background_img{
   opacity: 0;
 }
 .film:hover .info{
   opacity: 1;
+}
+#language{
+  display: flex;
+  justify-content: flex-start;
+}
+.language_img{
+  width: 30px;
+  height: 20px;
+  margin-top: 5px;
 }
 
 .film .info {

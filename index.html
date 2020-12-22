@@ -33,7 +33,7 @@
       <div class="home_films">
 
         <div v-for='film in films' class="film">
-          <img src="img/blind.jpg"  alt="">
+          <img src="img/blind.jpg"  alt="" class="background_img">
           <div class="info">
             <div>
               <h4>Title: </h4>
@@ -43,9 +43,9 @@
               <h4>Original Title: </h4>
               <span>{{film.original_title}}</span>
             </div>
-            <div>
+            <div id="language">
               <h4>Language: </h4>
-              <i :class="'flag flag-' + film.original_language "></i>
+              <img :src=" 'img/' + film.original_language + '_flag.jpg'" alt="language" class="language_img">
               <!-- <span>{{film.original_language}}</span> -->
             </div>
 

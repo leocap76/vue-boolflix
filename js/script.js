@@ -26,11 +26,15 @@ var root = new Vue(
             api_key: '8f719a955600e8912d95a9391e81e28a',
             language: 'it-IT',
           }
-        })
+        }).then(function (result) {
+          console.log(result.data.results);
+          self.search = '';
+          self.films = result.data.results;
+        });
       },
       getVote(film) {
         return parseInt(film.vote_average / 2);
-      },
+      }
     }
   }
 );
