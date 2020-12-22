@@ -19,27 +19,18 @@ var root = new Vue(
         var input = self.search;
         console.log(input);
 
-      axios
-        .get('https://api.themoviedb.org/3/search/movie',
-        {
+        axios
+        .get('https://api.themoviedb.org/3/search/movie',{
           params: {
             query: self.search,
             api_key: '8f719a955600e8912d95a9391e81e28a',
             language: 'it-IT',
           }
         })
-
-        .then(function (result) {
-          console.log(result.data.results);
-          self.search = '';
-          self.films = result.data.results;
-        },
-
-        self.films.forEach((element) => {
-          let vote = (element.vote_average / 2);
-          element.star = Math.ceil(vote);
-        }),
-      )
-    },
+      },
+      getVote(film) {
+        return parseInt(film.vote_average / 2);
+      },
+    }
   }
 );

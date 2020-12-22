@@ -45,13 +45,13 @@
             </div>
             <div>
               <h4>Language: </h4>
-              <i :class="'flag flag-' + movie.original_language "></i>
+              <i :class="'flag flag-' + film.original_language "></i>
               <!-- <span>{{film.original_language}}</span> -->
             </div>
 
             <h4>Vote: <span>
-              <i  class="fas fa-star"></i>
-              <i  class="far fa-star"></i>
+              <i v-for="i in getVote(film)" class="fas fa-star"></i>
+              <i v-for="i in (5-getVote(film))"  class="far fa-star"></i>
             </span></h4>
             <div class="overview">
               <h4>Overview: </h4>
