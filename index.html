@@ -33,7 +33,7 @@
       <div class="home_films">
 
         <div  v-for="film in films" class="film">
-          <img :src=" imgPrefix + film.poster_path "  alt="" class="background_img">
+          <img :src="imgFunction ( film.poster_path )"  alt="" class="background_img">
           <div class="info">
             <div>
               <h4>Title: </h4>
@@ -49,10 +49,12 @@
               <!-- <span>{{film.original_language}}</span> -->
             </div>
 
-            <h4>Vote: <span>
-              <i v-for="i in getVote(film)" class="fas fa-star"></i>
-              <i v-for="i in (5-getVote(film))"  class="far fa-star"></i>
-            </span></h4>
+            <h4>Vote: 
+              <span>
+                <i v-for="i in getVote(film)" class="fas fa-star"></i>
+                <i v-for="i in (5-getVote(film))"  class="far fa-star"></i>
+              </span>
+            </h4>
             <div class="overview">
               <h4 v-if="film.overview != ''" >Overview: </h4>
               <p>{{film.overview}}</p>

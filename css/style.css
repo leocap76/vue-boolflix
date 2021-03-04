@@ -8,6 +8,10 @@
 body{
   background-color: #141414;
 }
+input{
+  outline: none;
+}
+
 header{
   position: fixed;
   z-index: 7;
@@ -22,6 +26,7 @@ header img{
   width: 50px;
   float: left;
   margin: 40px;
+  cursor: pointer;
 }
 header input{
   background-color: black;
@@ -54,6 +59,7 @@ header input{
 
 .home_films{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -69,12 +75,15 @@ header input{
   align-items: center;
   width: 224px;
   height: 334px;
-  background-color: white;
-  margin-right: 20px;
+  background-color: whitesmoke;
+  margin: 10px 10px;
+  cursor: pointer;
+  border-radius: 3px;
 }
 .logo img{
   width: 200px;
   margin-left: 120px;
+  cursor: pointer;
 }
 .film img{
   max-width: 220px;

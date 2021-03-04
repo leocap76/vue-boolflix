@@ -12,6 +12,7 @@ var root = new Vue(
       series: [],
       search: '',
       imgPrefix: 'https://image.tmdb.org/t/p/w220_and_h330_face',
+      defaultImage:'https://www.mylittleadventure.com/images/default/default-img.png',
     },
     methods: {
 
@@ -28,14 +29,24 @@ var root = new Vue(
             language: 'it-IT',
           }
         }).then(function (result) {
-          console.log(result.data.results);
+          // console.log(result.data.results);
           self.search = '';
           self.films = result.data.results;
         });
       },
       getVote(film) {
-        return parseInt(film.vote_average / 2);
+        return Math.ceil(film.vote_average / 2);
+      },
+
+      imgFunction: function( img ){
+        if(img){
+          return this.imgPrefix + img;
+        }else{
+          return this.defaultImage;
+        }
       }
-    }
+    },
+
+    
   }
 );
